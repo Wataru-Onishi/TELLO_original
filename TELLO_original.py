@@ -17,8 +17,8 @@ def main():
         cv2.imshow('Show image',frame_RGB)
 
         hsv = cv2.cvtColor(frame_BGR, cv2.COLOR_RGB2HSV)
-        lower_orange = np.array([50,100,100])
-        upper_orange = np.array([100,255,255])
+        lower_orange = np.array([0,220,30])
+        upper_orange = np.array([15,255,255])
         mask = cv2.inRange(hsv, lower_orange, upper_orange)
         res = cv2.bitwise_and(frame_RGB,frame_RGB, mask= mask)
         cv2.imshow('res',res)
