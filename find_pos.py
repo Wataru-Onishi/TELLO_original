@@ -95,12 +95,6 @@ def main():
                         # 画面に表示する
                         cv2.imshow('frame',frame_RGB)
 
-                        if y <= 150 :
-                            drone.down(20)
-                            time.sleep(0.5)
-                        if y >= 210 :
-                            drone.up(20)
-                            time.sleep(0.5)
                         if x < 230 :
                             drone.rotate_ccw(20)
                             time.sleep(0.5)
