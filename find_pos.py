@@ -11,8 +11,10 @@ from kbhit import *
 LOW_COLOR = np.array([0, 220, 30])
 HIGH_COLOR = np.array([15, 255, 255])
 
-# 抽出する塊のしきい値
+
+# 抽出する大きさの閾値
 AREA_RATIO_THRESHOLD = 0.005
+
 
 def find_specific_color(frame_BGR,AREA_RATIO_THRESHOLD,LOW_COLOR,HIGH_COLOR):
     """
