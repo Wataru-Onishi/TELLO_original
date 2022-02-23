@@ -7,6 +7,7 @@ import time
 from kbhit import *     
 
 
+#抽出する色の閾値
 LOW_COLOR = np.array([0, 220, 30])
 HIGH_COLOR = np.array([15, 255, 255])
 
