@@ -89,17 +89,21 @@ def main():
 
                         # 画面に表示する
                         cv2.imshow('frame',frame_RGB)
-
+                        
+                        #動作を指定する
+                        #xの座標が230より小さい場合、左に20°旋回する
                         if x < 230 :
                             drone.rotate_ccw(20)
                             time.sleep(0.5)
+                        #xの座標が250より大きい場合、右に20°旋回する
                         if x > 250 :
                             drone.rotate_cw(20)
                             time.sleep(0.5)
+                        #xの座標が見つからない場合、ループを続行する
                         if x < 0 :
                             time.sleep(0.5)
                             continue
-
+                        
                         k = cv2.waitKey(1)
                         if k == ord('q'):
                             break
